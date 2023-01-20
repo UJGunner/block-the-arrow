@@ -57,6 +57,13 @@ basic.forever(function () {
             basic.showString("score")
             basic.showString("" + (points))
             points = 0
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                `)
         }
     } else if (arrow == 2) {
         basic.pause(5000)
@@ -73,6 +80,13 @@ basic.forever(function () {
             basic.showString("score")
             basic.showString("" + (points))
             points = 0
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                `)
         }
     } else if (arrow == 3) {
         basic.pause(5000)
@@ -89,6 +103,13 @@ basic.forever(function () {
             basic.showString("score")
             basic.showString("" + (points))
             points = 0
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                `)
         }
     } else {
         basic.pause(5000)
@@ -105,6 +126,13 @@ basic.forever(function () {
             basic.showString("score")
             basic.showString("" + (points))
             points = 0
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                `)
         }
     }
 })
