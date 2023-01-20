@@ -102,8 +102,8 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    music.playMelody("C C C C D F E D ", 120)
-    music.playMelody("G G G G G A E F ", 120)
-    music.playMelody("D D D D D F E D ", 120)
+    music.playMelody("C - C - D F E D ", 120)
+    music.playMelody("G - G - G A E F ", 120)
+    music.playMelody("D - D - D F E D ", 120)
     music.playMelody("C C5 B A G F E D ", 120)
 })
