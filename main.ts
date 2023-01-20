@@ -1,4 +1,3 @@
-let arrow = 0
 input.onButtonPressed(Button.A, function () {
     basic.showLeds(`
         # . . . .
@@ -8,7 +7,7 @@ input.onButtonPressed(Button.A, function () {
         # . . . .
         `)
 })
-input.onGesture(Gesture.LogoUp, function () {
+input.onButtonPressed(Button.AB, function () {
     basic.showLeds(`
         # # # # #
         . . . . .
@@ -16,9 +15,6 @@ input.onGesture(Gesture.LogoUp, function () {
         . . . . .
         . . . . .
         `)
-})
-input.onButtonPressed(Button.AB, function () {
-    basic.showString("Game over")
 })
 input.onButtonPressed(Button.B, function () {
     basic.showLeds(`
@@ -38,15 +34,78 @@ input.onGesture(Gesture.Shake, function () {
         # # # # #
         `)
 })
+input.onLogoEvent(TouchButtonEvent.Touched, function () {
+    basic.showString("score")
+    basic.showString("" + (points))
+})
+let arrow = 0
+let points = 0
+points = 0
 basic.forever(function () {
     if (arrow == 1) {
-    	
+        basic.pause(5000)
+        if (input.buttonIsPressed(Button.A)) {
+            points += 1
+        } else {
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                `)
+            basic.showString("score")
+            basic.showString("" + (points))
+            points = 0
+        }
     } else if (arrow == 2) {
-    	
+        basic.pause(5000)
+        if (input.buttonIsPressed(Button.B)) {
+            points += 1
+        } else {
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                `)
+            basic.showString("score")
+            basic.showString("" + (points))
+            points = 0
+        }
     } else if (arrow == 3) {
-    	
+        basic.pause(5000)
+        if (input.buttonIsPressed(Button.AB)) {
+            points += 1
+        } else {
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                `)
+            basic.showString("score")
+            basic.showString("" + (points))
+            points = 0
+        }
     } else {
-    	
+        basic.pause(5000)
+        if (input.isGesture(Gesture.Shake)) {
+            points += 1
+        } else {
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                `)
+            basic.showString("score")
+            basic.showString("" + (points))
+            points = 0
+        }
     }
 })
 basic.forever(function () {
