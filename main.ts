@@ -1,3 +1,4 @@
+let arrow = 0
 input.onButtonPressed(Button.A, function () {
     basic.showLeds(`
         # . . . .
@@ -55,12 +56,8 @@ input.onGesture(Gesture.Shake, function () {
     }
 })
 input.onLogoEvent(TouchButtonEvent.Touched, function () {
-    basic.showString("score")
-    basic.showString("" + (points))
+    basic.showString("good job")
 })
-let arrow = 0
-let points = 0
-points = 0
 basic.forever(function () {
     arrow = randint(1, 4)
     if (arrow == 1) {
