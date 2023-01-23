@@ -63,10 +63,20 @@ input.onGesture(Gesture.Shake, function () {
     }
 })
 input.onLogoEvent(TouchButtonEvent.Touched, function () {
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
     basic.showString("good job")
+    basic.showString("score")
+    basic.showString("" + (points))
 })
 let arrow = 0
 let points = 0
+points = 0
 let lives = 3
 basic.forever(function () {
     arrow = randint(1, 4)
@@ -124,6 +134,7 @@ basic.forever(function () {
             . . . . .
             `)
         basic.showString("game over")
+        basic.showString("score")
         basic.showString("" + (points))
     }
 })
