@@ -116,6 +116,13 @@ basic.forever(function () {
 })
 basic.forever(function () {
     if (lives == 0) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
         basic.showString("game over")
         basic.showString("" + (points))
     }
