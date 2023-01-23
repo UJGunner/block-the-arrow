@@ -70,7 +70,7 @@ input.onLogoEvent(TouchButtonEvent.Touched, function () {
         . . . . .
         . . . . .
         `)
-    basic.showString("good job")
+    basic.showString("game over")
     basic.showString("score")
     basic.showString("" + (points))
 })
