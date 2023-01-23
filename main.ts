@@ -88,7 +88,7 @@ basic.forever(function () {
             . . # . .
             . . . . .
             `)
-        basic.pause(2000)
+        basic.pause(5000)
     } else if (arrow == 2) {
         basic.showLeds(`
             . . . . .
@@ -97,7 +97,7 @@ basic.forever(function () {
             . . # . .
             . . . . .
             `)
-        basic.pause(2000)
+        basic.pause(5000)
     } else if (arrow == 3) {
         basic.showLeds(`
             . . # . .
@@ -106,7 +106,7 @@ basic.forever(function () {
             . . # . .
             . . . . .
             `)
-        basic.pause(2000)
+        basic.pause(5000)
     } else {
         basic.showLeds(`
             . . . . .
@@ -115,7 +115,7 @@ basic.forever(function () {
             . . # . .
             . . # . .
             `)
-        basic.pause(2000)
+        basic.pause(5000)
     }
 })
 basic.forever(function () {
