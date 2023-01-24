@@ -73,7 +73,10 @@ input.onLogoEvent(TouchButtonEvent.Touched, function () {
     basic.showString("game over")
     basic.showString("score")
     basic.showString("" + (points))
+    basic.showString("high score")
+    basic.showString("" + (high_score))
 })
+let high_score = 0
 let arrow = 0
 let points = 0
 points = 0
@@ -160,5 +163,10 @@ basic.forever(function () {
         basic.showString("game over")
         basic.showString("score")
         basic.showString("" + (points))
+        basic.showString("high score")
+        basic.showString("" + (high_score))
+    }
+    if (points > high_score) {
+        high_score = points
     }
 })
