@@ -69,12 +69,15 @@ input.onLogoEvent(TouchButtonEvent.Touched, function () {
     basic.showString("" + (points))
     basic.showString("high score")
     basic.showString("" + (high_score))
+    points = 0
+    lives = 3
 })
 let high_score = 0
 let arrow = 0
+let lives = 0
 let points = 0
 points = 0
-let lives = 3
+lives = 3
 basic.forever(function () {
     arrow = randint(1, 4)
     if (arrow == 1) {
@@ -153,6 +156,8 @@ basic.forever(function () {
         basic.showString("" + (points))
         basic.showString("high score")
         basic.showString("" + (high_score))
+        points = 0
+        lives = 3
     }
     if (points > high_score) {
         high_score = points
