@@ -81,41 +81,65 @@ let lives = 3
 basic.forever(function () {
     arrow = randint(1, 4)
     if (arrow == 1) {
-        basic.showLeds(`
-            . . . . .
-            . . # . .
-            # # # # .
-            . . # . .
-            . . . . .
-            `)
-        basic.pause(5000)
+        basic.showArrow(ArrowNames.East)
+        if (points >= 10) {
+            basic.pause(2000)
+            basic.pause(2000)
+        } else if (points >= 20) {
+            basic.pause(2000)
+            basic.pause(1000)
+        } else if (points >= 30) {
+            basic.pause(2000)
+        } else if (points >= 40) {
+            basic.pause(1000)
+        } else {
+            basic.pause(5000)
+        }
     } else if (arrow == 2) {
-        basic.showLeds(`
-            . . . . .
-            . . # . .
-            . # # # #
-            . . # . .
-            . . . . .
-            `)
-        basic.pause(5000)
+        basic.showArrow(ArrowNames.West)
+        if (points >= 10) {
+            basic.pause(2000)
+            basic.pause(2000)
+        } else if (points >= 20) {
+            basic.pause(2000)
+            basic.pause(1000)
+        } else if (points >= 30) {
+            basic.pause(2000)
+        } else if (points >= 40) {
+            basic.pause(1000)
+        } else {
+            basic.pause(5000)
+        }
     } else if (arrow == 3) {
-        basic.showLeds(`
-            . . # . .
-            . . # . .
-            . # # # .
-            . . # . .
-            . . . . .
-            `)
-        basic.pause(5000)
+        basic.showArrow(ArrowNames.South)
+        if (points >= 10) {
+            basic.pause(2000)
+            basic.pause(2000)
+        } else if (points >= 20) {
+            basic.pause(2000)
+            basic.pause(1000)
+        } else if (points >= 30) {
+            basic.pause(2000)
+        } else if (points >= 40) {
+            basic.pause(1000)
+        } else {
+            basic.pause(5000)
+        }
     } else {
-        basic.showLeds(`
-            . . . . .
-            . . # . .
-            . # # # .
-            . . # . .
-            . . # . .
-            `)
-        basic.pause(5000)
+        basic.showArrow(ArrowNames.North)
+        if (points >= 10) {
+            basic.pause(2000)
+            basic.pause(2000)
+        } else if (points >= 20) {
+            basic.pause(2000)
+            basic.pause(1000)
+        } else if (points >= 30) {
+            basic.pause(2000)
+        } else if (points >= 40) {
+            basic.pause(1000)
+        } else {
+            basic.pause(5000)
+        }
     }
 })
 basic.forever(function () {
