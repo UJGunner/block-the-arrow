@@ -63,13 +63,7 @@ input.onGesture(Gesture.Shake, function () {
     }
 })
 input.onLogoEvent(TouchButtonEvent.Touched, function () {
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `)
+    basic.clearScreen()
     basic.showString("game over")
     basic.showString("score")
     basic.showString("" + (points))
@@ -153,13 +147,7 @@ basic.forever(function () {
 })
 basic.forever(function () {
     if (lives == 0) {
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
+        basic.clearScreen()
         basic.showString("game over")
         basic.showString("score")
         basic.showString("" + (points))
