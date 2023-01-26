@@ -64,20 +64,16 @@ input.onGesture(Gesture.Shake, function () {
 })
 input.onLogoEvent(TouchButtonEvent.Touched, function () {
     basic.clearScreen()
-    basic.showString("game over")
     basic.showString("score")
     basic.showString("" + (points))
     basic.showString("high score")
     basic.showString("" + (high_score))
-    points = 0
-    lives = 3
 })
 let high_score = 0
 let arrow = 0
-let lives = 0
 let points = 0
 points = 0
-lives = 3
+let lives = 3
 basic.forever(function () {
     arrow = randint(1, 4)
     if (arrow == 1) {
