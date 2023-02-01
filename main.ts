@@ -63,17 +63,24 @@ input.onGesture(Gesture.Shake, function () {
     }
 })
 input.onLogoEvent(TouchButtonEvent.Touched, function () {
-    basic.clearScreen()
-    basic.showString("score")
-    basic.showString("" + (points))
-    basic.showString("high score")
-    basic.showString("" + (high_score))
+    reset()
 })
+function reset () {
+    OLED.clear()
+    OLED.writeStringNewLine("lives" + lives)
+    OLED.newLine()
+    OLED.writeStringNewLine("score" + points)
+    OLED.newLine()
+    OLED.writeStringNewLine("high score" + high_score)
+    points = 0
+    lives = 3
+}
 let high_score = 0
-let arrow = 0
+let lives = 0
 let points = 0
-points = 0
-let lives = 3
+let arrow = 0
+OLED.init(128, 64)
+reset()
 basic.forever(function () {
     arrow = randint(1, 4)
     if (arrow == 1) {
@@ -146,14 +153,8 @@ basic.forever(function () {
 })
 basic.forever(function () {
     if (lives == 0) {
-        basic.clearScreen()
         basic.showString("game over")
-        basic.showString("score")
-        basic.showString("" + (points))
-        basic.showString("high score")
-        basic.showString("" + (high_score))
-        points = 0
-        lives = 3
+        reset()
     }
     if (points > high_score) {
         high_score = points
