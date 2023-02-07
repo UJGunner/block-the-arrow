@@ -30,6 +30,21 @@ input.onButtonPressed(Button.AB, function () {
         lives += -1
     }
 })
+function arrow_speed () {
+    if (points >= 10) {
+        basic.pause(2000)
+        basic.pause(2000)
+    } else if (points >= 20) {
+        basic.pause(2000)
+        basic.pause(1000)
+    } else if (points >= 30) {
+        basic.pause(2000)
+    } else if (points >= 40) {
+        basic.pause(1000)
+    } else {
+        basic.pause(5000)
+    }
+}
 input.onButtonPressed(Button.B, function () {
     basic.showLeds(`
         . . . . #
@@ -85,64 +100,16 @@ basic.forever(function () {
     arrow = randint(1, 4)
     if (arrow == 1) {
         basic.showArrow(ArrowNames.East)
-        if (points >= 10) {
-            basic.pause(2000)
-            basic.pause(2000)
-        } else if (points >= 20) {
-            basic.pause(2000)
-            basic.pause(1000)
-        } else if (points >= 30) {
-            basic.pause(2000)
-        } else if (points >= 40) {
-            basic.pause(1000)
-        } else {
-            basic.pause(5000)
-        }
+        arrow_speed()
     } else if (arrow == 2) {
         basic.showArrow(ArrowNames.West)
-        if (points >= 10) {
-            basic.pause(2000)
-            basic.pause(2000)
-        } else if (points >= 20) {
-            basic.pause(2000)
-            basic.pause(1000)
-        } else if (points >= 30) {
-            basic.pause(2000)
-        } else if (points >= 40) {
-            basic.pause(1000)
-        } else {
-            basic.pause(5000)
-        }
+        arrow_speed()
     } else if (arrow == 3) {
         basic.showArrow(ArrowNames.South)
-        if (points >= 10) {
-            basic.pause(2000)
-            basic.pause(2000)
-        } else if (points >= 20) {
-            basic.pause(2000)
-            basic.pause(1000)
-        } else if (points >= 30) {
-            basic.pause(2000)
-        } else if (points >= 40) {
-            basic.pause(1000)
-        } else {
-            basic.pause(5000)
-        }
+        arrow_speed()
     } else {
         basic.showArrow(ArrowNames.North)
-        if (points >= 10) {
-            basic.pause(2000)
-            basic.pause(2000)
-        } else if (points >= 20) {
-            basic.pause(2000)
-            basic.pause(1000)
-        } else if (points >= 30) {
-            basic.pause(2000)
-        } else if (points >= 40) {
-            basic.pause(1000)
-        } else {
-            basic.pause(5000)
-        }
+        arrow_speed()
     }
 })
 basic.forever(function () {
